@@ -1,25 +1,25 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 
 body{
 
-    min-height:100vh;
+min-height:100vh;
 
-    background:
-    linear-gradient(
-    180deg,
-    #050505,
-    #1a1015,
-    #f8c7dc
-    );
+background:
+linear-gradient(
+180deg,
+#050505,
+#1b1118,
+#f8c7dc
+);
 
-    font-family:Arial,sans-serif;
+font-family:Arial,sans-serif;
 
-    color:white;
+color:white;
 
 }
 
@@ -27,41 +27,40 @@ body{
 
 .container{
 
-    display:flex;
+display:flex;
 
-    flex-direction:column;
+flex-direction:column;
 
-    align-items:center;
+align-items:center;
 
-    padding:40px 20px;
+padding:40px 20px;
 
 }
 
 
 
-/* винил */
 
 .vinyl-box{
 
-    position:relative;
+position:relative;
 
-    display:flex;
+display:flex;
 
-    justify-content:center;
+justify-content:center;
 
-    align-items:center;
+align-items:center;
 
 }
+
 
 
 .vinyl{
 
-    width:230px;
+width:230px;
 
-    animation:spin 7s linear infinite;
+animation:spin 7s linear infinite;
 
-    filter:
-    drop-shadow(0 0 20px #f4a6c8);
+filter:drop-shadow(0 0 20px #f4a6c8);
 
 }
 
@@ -83,58 +82,51 @@ transform:rotate(360deg);
 
 .vinyl-text{
 
-    position:absolute;
+position:absolute;
 
-    color:white;
+text-align:center;
 
-    font-size:8px;
+font-size:8px;
 
-    text-align:center;
+color:white;
 
-    opacity:0.8;
+opacity:0.8;
 
 }
 
 
 
-/* кнопка */
 
 
 button{
 
-    margin-top:35px;
+margin-top:35px;
 
-    background:#f4a6c8;
+background:#f4a6c8;
 
-    border:none;
+border:none;
 
-    color:#2b1520;
+padding:16px 35px;
 
-    padding:16px 35px;
+border-radius:40px;
 
-    border-radius:40px;
+font-size:18px;
 
-    font-size:18px;
+color:#351523;
 
-    box-shadow:
-    0 0 20px #f4a6c8;
+box-shadow:0 0 20px #f4a6c8;
 
 }
 
 
 
-/* листай */
-
-
 .scroll{
 
-    margin-top:45px;
+margin-top:50px;
 
-    font-size:24px;
+font-size:25px;
 
-    color:#ffe3ef;
-
-    animation:float 2s infinite;
+animation:float 2s infinite;
 
 }
 
@@ -153,72 +145,133 @@ transform:translateY(10px);
 
 
 
-/* фото теперь по одному */
-
 
 .gallery{
 
-    width:100%;
+width:100%;
 
-    display:flex;
+display:flex;
 
-    flex-direction:column;
+flex-direction:column;
 
-    align-items:center;
+align-items:center;
 
-    gap:45px;
+gap:35px;
 
-    margin-top:60px;
-
-}
-
-
-
-.photo{
-
-    width:90%;
-
-    max-width:400px;
-
-    background:#120c10;
-
-    padding:12px;
-
-    border-radius:20px;
-
-    border:3px solid #f4a6c8;
-
-    box-shadow:
-
-    0 0 20px #f4a6c8;
-
-}
-
-
-
-.photo img{
-
-    width:100%;
-
-    border-radius:15px;
+margin-top:60px;
 
 }
 
 
 
 
-/* Minecraft */
+.polaroid{
+
+background:white;
+
+width:90%;
+
+max-width:380px;
+
+padding:12px;
+
+padding-bottom:25px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+
+
+opacity:0;
+
+transform:
+translateY(60px)
+rotate(-3deg);
+
+
+transition:
+
+opacity 1s ease,
+
+transform 1s ease;
+
+}
+
+
+
+
+.polaroid.show{
+
+opacity:1;
+
+transform:
+translateY(0)
+rotate(-3deg);
+
+}
+
+
+
+.polaroid:nth-child(even).show{
+
+transform:
+translateY(0)
+rotate(3deg);
+
+}
+
+
+
+
+.polaroid img{
+
+width:100%;
+
+display:block;
+
+}
+
+
+
+.polaroid p{
+
+color:#4a2735;
+
+font-size:13px;
+
+text-align:center;
+
+margin-top:15px;
+
+font-family:cursive;
+
+}
+
+
+
+
+
+.little-text{
+
+font-size:14px;
+
+color:#ffe5f0;
+
+text-align:center;
+
+}
+
+
+
 
 
 .minecraft{
 
-    margin-top:60px;
+margin-top:70px;
 
-    display:flex;
+display:flex;
 
-    gap:25px;
+gap:20px;
 
-    align-items:center;
+align-items:center;
 
 }
 
@@ -226,37 +279,8 @@ transform:translateY(10px);
 
 .minecraft img{
 
-    width:80px;
+width:65px;
 
-    image-rendering:pixelated;
-
-    animation:bounce 2s infinite;
-
-}
-
-
-
-@keyframes bounce{
-
-50%{
-
-transform:translateY(-10px);
-
-}
-
-}
-
-
-
-/* сакура */
-
-
-.sakura{
-
-    position:absolute;
-
-    width:120px;
-
-    opacity:0.9;
+image-rendering:pixelated;
 
 }
