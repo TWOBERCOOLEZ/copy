@@ -1,7 +1,9 @@
 *{
+
 margin:0;
 padding:0;
 box-sizing:border-box;
+
 }
 
 
@@ -21,7 +23,10 @@ font-family:Arial,sans-serif;
 
 color:white;
 
+overflow-x:hidden;
+
 }
+
 
 
 
@@ -39,6 +44,9 @@ padding:40px 20px;
 
 
 
+
+
+/* винил */
 
 .vinyl-box{
 
@@ -69,14 +77,19 @@ filter:drop-shadow(0 0 20px #f4a6c8);
 @keyframes spin{
 
 from{
+
 transform:rotate(0deg);
+
 }
 
 to{
+
 transform:rotate(360deg);
+
 }
 
 }
+
 
 
 
@@ -84,9 +97,9 @@ transform:rotate(360deg);
 
 position:absolute;
 
-text-align:center;
-
 font-size:8px;
+
+text-align:center;
 
 color:white;
 
@@ -96,6 +109,8 @@ opacity:0.8;
 
 
 
+
+/* кнопка музыки */
 
 
 button{
@@ -114,10 +129,28 @@ font-size:18px;
 
 color:#351523;
 
-box-shadow:0 0 20px #f4a6c8;
+cursor:pointer;
+
+box-shadow:
+
+0 0 20px #f4a6c8;
+
+transition:0.3s;
 
 }
 
+
+button:hover{
+
+transform:scale(1.05);
+
+}
+
+
+
+
+
+/* листай */
 
 
 .scroll{
@@ -146,6 +179,8 @@ transform:translateY(10px);
 
 
 
+/* фотографии */
+
 .gallery{
 
 width:100%;
@@ -165,6 +200,7 @@ margin-top:60px;
 
 
 
+
 .polaroid{
 
 background:white;
@@ -177,13 +213,17 @@ padding:12px;
 
 padding-bottom:25px;
 
-box-shadow:0 10px 25px rgba(0,0,0,0.4);
+box-shadow:
+
+0 10px 25px rgba(0,0,0,0.4);
 
 
 opacity:0;
 
 transform:
+
 translateY(60px)
+
 rotate(-3deg);
 
 
@@ -198,23 +238,16 @@ transform 1s ease;
 
 
 
+
 .polaroid.show{
 
 opacity:1;
 
 transform:
+
 translateY(0)
+
 rotate(-3deg);
-
-}
-
-
-
-.polaroid:nth-child(even).show{
-
-transform:
-translateY(0)
-rotate(3deg);
 
 }
 
@@ -249,6 +282,9 @@ font-family:cursive;
 
 
 
+/* маленькие надписи */
+
+
 .little-text{
 
 font-size:14px;
@@ -257,11 +293,15 @@ color:#ffe5f0;
 
 text-align:center;
 
+letter-spacing:1px;
+
 }
 
 
 
 
+
+/* Minecraft низ */
 
 .minecraft{
 
@@ -282,5 +322,228 @@ align-items:center;
 width:65px;
 
 image-rendering:pixelated;
+
+}
+
+
+
+
+
+/* падающие сердечки PNG */
+
+
+.hearts{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:5;
+
+}
+
+
+
+
+.heart{
+
+position:absolute;
+
+top:-40px;
+
+width:25px;
+
+height:25px;
+
+image-rendering:pixelated;
+
+animation:fall linear forwards;
+
+}
+
+
+
+
+@keyframes fall{
+
+
+0%{
+
+transform:
+
+translateY(-40px)
+
+rotate(0deg);
+
+opacity:1;
+
+}
+
+
+
+100%{
+
+transform:
+
+translateY(110vh)
+
+rotate(360deg);
+
+opacity:0;
+
+}
+
+
+}
+
+
+
+
+
+/* падающие цветочки сакуры */
+
+
+.flower{
+
+position:absolute;
+
+top:-40px;
+
+width:25px;
+
+height:25px;
+
+image-rendering:pixelated;
+
+animation:flowerFall linear forwards;
+
+opacity:0.85;
+
+filter:
+
+drop-shadow(0 0 5px #f8c7dc);
+
+}
+
+
+
+
+@keyframes flowerFall{
+
+
+0%{
+
+transform:
+
+translateY(-40px)
+
+rotate(0deg);
+
+}
+
+
+100%{
+
+transform:
+
+translateY(110vh)
+
+rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+
+
+
+
+/* кнопка перехода */
+
+
+.next-box{
+
+margin-top:80px;
+
+margin-bottom:50px;
+
+text-align:center;
+
+padding:30px;
+
+border:
+
+2px solid #f4a6c8;
+
+border-radius:30px;
+
+background:
+
+rgba(255,255,255,0.08);
+
+
+box-shadow:
+
+0 0 25px #f4a6c8;
+
+}
+
+
+
+
+.next-box p{
+
+font-size:16px;
+
+margin-bottom:15px;
+
+color:#ffe5f0;
+
+}
+
+
+
+
+
+.next-button{
+
+margin-top:15px;
+
+background:#f8c7dc;
+
+color:#351523;
+
+font-size:20px;
+
+padding:15px 45px;
+
+border-radius:50px;
+
+border:2px solid white;
+
+box-shadow:
+
+0 0 15px #f8c7dc;
+
+}
+
+
+
+
+.next-button:hover{
+
+transform:scale(1.1);
 
 }
