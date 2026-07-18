@@ -39,7 +39,6 @@ letter.classList.add("show");
 
 
 
-
 song.play();
 
 
@@ -50,10 +49,7 @@ song.play();
 
 
 
-
-
-// падающие сердечки и сакура 🌸💗
-
+// падающие Minecraft сердечки и сакура 🌸💗
 
 
 const particles =
@@ -94,27 +90,30 @@ img.className="particle";
 
 
 img.style.left =
+
 Math.random()*100+"%";
 
 
 
 img.style.width =
+
 (15+Math.random()*20)+"px";
 
 
 
 img.style.height =
+
 img.style.width;
 
 
 
 img.style.animationDuration =
+
 (10+Math.random()*8)+"s";
 
 
 
 particles.appendChild(img);
-
 
 
 
