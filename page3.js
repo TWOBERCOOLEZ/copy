@@ -4,7 +4,7 @@ function openLetter() {
     const letter = document.getElementById("letter");
     const song = document.getElementById("letterSong");
 
-    // Запускаем музыку сразу после нажатия (важно для iPhone)
+    //  музыкa сразу после нажатия
     song.play().catch(error => {
         console.log("Ошибка воспроизведения:", error);
     });
@@ -22,7 +22,7 @@ function openLetter() {
 }
 
 
-// Падающие Minecraft-сердечки и сакура
+// Падающие хуйни
 
 const particles = document.querySelector(".particles");
 
@@ -33,7 +33,7 @@ function createParticle() {
     if (Math.random() < 0.7) {
         img.src = "heart.png";
     } else {
-        img.src = "cherry_flower.png";
+        img.src = "cherry_blossom.png";
     }
 
     img.className = "particle";
